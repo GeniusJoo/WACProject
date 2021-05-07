@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body
+{
+    background: url("signup.png");
+    background-size: 100%;
+    background-position: 0px 100px;
+    background-repeat: no-repeat;
+    font-family: 'Cinzel', 'serif';
+    display: flex;
+}
+
+.title a {
+    position: absolute; top: 30px; left:30px;
+    font-size: 50px; color: black;  
+    margin-bottom: 60px;
+    text-decoration: none;
+}
+
+.nav-info1 {
+    display: flex;
+    position: absolute; top: 15px; right:30px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+  
+.nav-info1 a {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    color : black;
+    text-decoration: none;
+    position: relative;
+    padding: 0px 10px;
+}
+  
+.nav-info2 {
+    display: flex;
+    position: absolute; top: 15px; right:120px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+  
+.nav-info2 a {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    color : black;
+    text-decoration: none;
+    position: relative;
+    padding: 0px 10px;
+}
+.nav-items {
+    display: flex;
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute; top: 30px; right:40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 10vh;
+}
+  
+.nav-items a {
+    font-size: 20px;
+    color : black;
+    text-decoration: none;
+    position: relative;
+    padding: 6px 12px; z-index: 2;
+}
+  
+.nav-items a::after {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all .5s ease-out;
+}
+  
+.nav-items a:hover::after {
+    width: 70%;
+}
+
+.form-design
+{
+    width: 1000px; height: 570px;
+    background-color: lightgray;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%; top: 60%;
+    margin-left: -500px;
+    margin-top: -300px;
+    opacity: 0.95;
+}
+
+.section-one
+{
+    float: left;
+    width: 400px;
+    height: 420px;
+    border: 3px solid none;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 10px;
+    background-color: white;   
+}
+
+.section-two
+{
+    float: right;
+    width: 400px;
+    height: 420px;
+    border: 3px solid none;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 10px;
+    background-color: white;
+}
+
+.info
+{
+    position: relative;
+    top: 30px;
+}
+.info label
+{
+    top: 10px;
+    left: 5px;
+    padding: .5em .10em;
+    color: #000;
+}
+
+.birth-info label
+{
+    top: 10px;
+    left: 5px;
+    margin-right: 10px;
+    padding: .5em .10em;
+    color: #000;
+}
+
+.info input[type="text"],
+.info input[type="password"],
+.info input[type="email"]
+{
+    width: 80%;
+    height: auto;
+    line-height: normal;
+    padding: .4em .8em;
+    font-family: inherit;
+    border: 1px solid #999;
+    margin: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    outline-style: none;
+}
+
+.info input[type="checkbox"]
+{
+    width: 20px;
+    position: relative;
+}
+.birth-info
+{
+    position: relative;
+    top: 60px;
+}
+
+.birth-info input[type="text"]
+{
+    width: 40px;
+    height: 20px;
+}
+
+.birth-info select
+{
+    width: 50px;
+    height: 27px;
+}
+
+.text-box
+{
+    height: 120px;
+    width: 300px;
+    padding: 0.8em;
+    font-family: sans-serif;
+    float: left;
+    border: 1px solid #999;
+    background-color: #ffe7ea;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+    left: 38px;
+}
+
+.text-box > p
+{
+    font-size: 15px;
+    display: block;
+    line-height: 180%;
+}
+
+.text-box > h4
+{
+    position: relative;
+    top: -40px;
+    left: -20px;
+    float: right;
+}
+
+input[name="submit"] {
+    margin: 0% 60% 0% 40%;
+    padding: 1rem 4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    display: inline-block;
+    width: auto;
+    color: white;
+    border: none;
+    border-radius: 4px;
+ }
