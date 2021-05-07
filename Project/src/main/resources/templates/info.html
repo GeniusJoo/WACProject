@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>myInfo</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+	</script>
+	<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js">
+	</script>
+	<script src="script.js">
+	</script>
+</head>
+
+<body>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+
+	<div class="title">
+		<a href="">Warm&Cool</a>
+	</div>
+  
+	<div class="nav">
+		<nav class="info-icon">
+      <a href=""><i class="fas fa-user-friends fa-lg" style="color:black"></i></a>
+    </nav> 
+    <nav class="alarm-icon">
+      <a href=""><i class="far fa-comment-alt fa-lg" style="color:black"></i></a>
+    </nav>
+    <nav class="menu-icon">
+      <a href=""><i class="fas fa-align-right fa-lg" style="color:black"></i></a>
+    </nav> 
+  </div>
+
+    <div class="navigation-menu">
+      <nav>
+        <li><a href="">Notice</a></li>
+        <li><a href="">OOTD</a></li>
+        <li><a href="">ABC</a></li>
+        <li><a href="">DEF</a></li>                
+      </nav>
+    </div>
+
+    <div class="profile-card">
+      <div class="card-header">
+        <div class="pic">
+          <img src="info.png" alt="">
+        </div>
+        <div class="name">name</div>
+        <div class="color">Warm</div>
+      </div>
+      <div class="card-footer">
+        <div class="counts">
+          <nav class="item">
+            <span>56</span>
+            <a href="">Posts</a>
+          </nav>
+          <div class="border"></div>
+          <nav class="item">
+            <span>120</span>
+            <a href="">Comments</a>
+          </nav>
+          <div class="border"></div>
+          <nav class="item">
+            <span>4</span>
+            <a href="">Bookmarks</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    $(".menu-icon").click(function(){
+      $(this).toggleClass("active");
+      $(".navigation-menu").toggleClass("active");
+      $(".menu-icon i").toggleClass("fa-times");
+    });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

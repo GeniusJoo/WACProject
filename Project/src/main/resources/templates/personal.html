@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 기본 meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- //기본 meta -->
+
+    <!-- stylesheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&Asap&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/ui.js"></script>
+
+    <!-- //stylesheet -->
+    <title>Warm&Cool</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="personal">
+        <header class="header">
+            <toolbar class="header__toolbar">
+                <button class="header__toolbar--button" type="button">
+                    <span class="material-icons">question_answer</span>
+                    소개
+                </button>
+                <button class="header__toolbar--button" type="button">
+                    <span class="material-icons">person</span>
+                    로그인
+                </button>
+            </toolbar>
+            <gnb class="header__gnb">
+                <button class="header__gnb--button" type="button">
+                    퍼스널컬러?
+                </button>
+                <button class="header__gnb--button" type="button">
+                    웜톤
+                </button>
+                <button class="header__gnb--button" type="button">
+                    쿨톤
+                </button>
+                <button class="header__gnb--button" type="button">
+                    셀프진단
+                </button>
+                <button class="header__gnb--button" type="button">
+                    오늘의추천
+                </button>
+            </gnb>
+        </header>
+        <p class="personal__title">Warm&#38;Cool</p>
+        <section class="personal__check-list">
+            <p class="personal__sub-title">퍼스널 컬러 자가진단표</p>
+            <div class="personal__fieldset">
+                <div class="personal__fieldset--wrapper">
+                    <p class="item__title">§ 피부 색</p>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="skinColor" value="yellow" class="item__checkbox--input" />
+                        피부에 노란 기가 감돈다.
+                    </label>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="skinColor" value="red" class="item__checkbox--input" />
+                        피부에 붉은 기가 감돈다.
+                    </label>
+                    <p class="item__title">§ 액세서리</p>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="accessary" value="gold" class="item__checkbox--input" />
+                        골드 계열의 쥬얼리가 잘 어울린다.
+                    </label>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="accessary" value="silver" class="item__checkbox--input" />
+                        피부에 붉은 기가 감돈다.
+                    </label>
+                    <p class="item__title">§ 홍채 색 </p>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="eyeColor" value="light" class="item__checkbox--input" />
+                        밝은 갈색에 가깝다
+                    </label>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="eyeColor" value="dark" class="item__checkbox--input" />
+                        짙은 갈색이거나 검은색에 가깝다.
+                    </label>
+                </div>
+                <div class="personal__fieldset--wrapper">
+                    <p class="item__title">§ 머리카락 색</p>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="hairColor" value="brown" class="item__checkbox--input" />
+                        갈색에 가깝다
+                    </label>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="hairColor" value="black" class="item__checkbox--input" />
+                        검정색에 가깝다
+                    </label>
+                    <p class="item__title">§ 햇빛에 장시간 노출 시</p>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="sunlight" value="burn" class="item__checkbox--input" />
+                        어둡게 탄다
+                    </label>
+                    <label class="item__checkbox">
+                        <input type="checkbox" name="sunlight" value="ripen" class="item__checkbox--input" />
+                        빨갛게 익는다
+                    </label>
+
+                </div>
+                <button type="button" class="personal__button">
+                    진단완료
+                </button>
+                <p class="personal__caution">
+                    *100%확실한 진단은 아니니 참고하시길 바랍니다
+                </p>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        
+    </footer>
+
+
+</body>
+
+</html>

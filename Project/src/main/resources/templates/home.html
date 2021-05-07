@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 기본 meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- //기본 meta -->
+
+    <!-- stylesheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&Asap&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/ui.js"></script>
+
+    <!-- //stylesheet -->
+    <title>Warm&Cool</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <toolbar class="header__toolbar">
+                <button class="header__toolbar--button" type="button">
+                    <span class="material-icons">question_answer</span>
+                    소개
+                </button>
+                <button class="header__toolbar--button" type="button">
+                    <span class="material-icons">person</span>
+                    로그인
+                </button>
+            </toolbar>
+            <gnb class="header__gnb">
+                <button class="header__gnb--button" type="button">
+                    퍼스널컬러?
+                </button>
+                <button class="header__gnb--button" type="button">
+                    웜톤
+                </button>
+                <button class="header__gnb--button" type="button">
+                    쿨톤
+                </button>
+                <button class="header__gnb--button" type="button">
+                    셀프진단
+                </button>
+                <button class="header__gnb--button" type="button">
+                    오늘의추천
+                </button>
+            </gnb>
+        </header>
+        <section class="main__content">
+            <p class="main__content--title">Warm&#38;Cool</p>
+            <textarea class="main__content--input" onchange={handleChange} value={value}
+                placeholder="&#13;&#10;&#13;&#10;&#13;&#10;The color is messenger and message."></textarea>
+        </section>
+    </main>
+    <footer id="footer">
+        
+    </footer>
+
+
+</body>
+
+</html>
