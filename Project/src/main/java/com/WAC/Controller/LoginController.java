@@ -1,8 +1,10 @@
 package com.WAC.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
-@org.springframework.stereotype.Controller
+@Controller
 public class LoginController {
 
 	@GetMapping("/")
@@ -10,8 +12,8 @@ public class LoginController {
 		return "home";
 	}
 	
-	@GetMapping(value = "/login")
-	public String getLoginInfo() throws Exception {
+	@PostMapping(value = "/login")
+	public String Login() throws Exception {
 		
 		return "login";
 	}

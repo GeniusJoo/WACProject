@@ -1,6 +1,6 @@
 package com;
 
-import javax.activation.DataSource;
+
 import javax.annotation.Resource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -22,15 +22,15 @@ public class ProjectApplication {
 		SpringApplication.run(ProjectApplication.class, args);
 	}
     
-	@Bean
-	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
-		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-		sessionFactory.setDataSource((javax.sql.DataSource) dataSource);
-		
-		Resource[] res = (Resource[]) new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*Mapper.xml");
-		sessionFactory.setMapperLocations((org.springframework.core.io.Resource[]) res);
-		
-		return sessionFactory.getObject();
-	}
+//	@Bean
+//	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+//		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+//		sessionFactory.setDataSource((javax.sql.DataSource) dataSource);
+//		
+//		Resource[] res = (Resource[]) new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*Mapper.xml");
+//		sessionFactory.setMapperLocations((org.springframework.core.io.Resource[]) res);
+//		
+//		return sessionFactory.getObject();
+//	}
 
 }
