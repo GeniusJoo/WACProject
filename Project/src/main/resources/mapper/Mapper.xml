@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.Project.Mapper.LoginMapper">
+	<select id="getLoginInfo" parameterType="com.Project.Model.LoginDto" resultType="com.Project.Model.LoginDto">
+		SELECT 
+			*
+		FROM 
+			user
+		WHERE
+			id = #{id}
+		AND 
+			passward = #{passward}
+	</select>
+</mapper>

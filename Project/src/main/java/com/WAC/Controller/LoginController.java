@@ -1,22 +1,18 @@
-package com.WAC.Controller;
+package com.WAC.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.WAC.Service.LoginService;
-
-@RestController
+@org.springframework.stereotype.Controller
 public class LoginController {
-	
-	@Autowired
-	LoginService loginService;
-	
-	@GetMapping(value = "/")
+
+	@GetMapping("/")
 	public String Main() {
-		System.out.println("test");
-		return "testtt";
+		return "home";
 	}
 	
+	@GetMapping(value = "/login")
+	public String getLoginInfo() throws Exception {
+		
+		return "login";
+	}
 }

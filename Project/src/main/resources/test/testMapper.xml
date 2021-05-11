@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.example.demo.TestMapper"> 
+	<select id="selectTest" resultType="com.example.demo.TestVo"> 
+		SELECT 'GOD' AS NAME 
+	</select> 
+
+</mapper>
+

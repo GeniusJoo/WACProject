@@ -10,10 +10,8 @@ import com.WAC.Model.LoginDto;
 public class LoginServicempl implements LoginService {
 	@Autowired
 	private LoginMapper loginMapper;
-
-	@Override
+	
 	public LoginDto getLoginInfo(LoginDto login) throws Exception {
 		return loginMapper.getLoginInfo(login);
 	}
-
 }
