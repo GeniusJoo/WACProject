@@ -30,6 +30,7 @@ public class LoginController {
 			
 		} else {
 		model.addAttribute("fail", "check your ID, PW");
+		System.out.println("fail. check your ID, PW");
 		return "login";
 		}
 	}
