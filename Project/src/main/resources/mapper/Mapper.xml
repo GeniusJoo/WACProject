@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.Project.Mapper.LoginMapper">
-	<select id="getLoginInfo" parameterType="com.Project.Model.LoginDto" resultType="com.Project.Model.LoginDto">
+<mapper namespace="com.WAC.Mapper.LoginMapper">
+	<select id="getLoginInfo" parameterType="com.WAC.Model.LoginDto" resultType="com.WAC.Model.LoginDto">
 		SELECT 
 			*
 		FROM 
@@ -9,6 +11,6 @@
 		WHERE
 			id = #{id}
 		AND 
-			passward = #{passward}
+			password = #{password}
 	</select>
 </mapper>

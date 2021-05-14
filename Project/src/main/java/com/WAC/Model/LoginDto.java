@@ -15,7 +15,7 @@ public class LoginDto {
 	private String email;
 	private String nickname;
 	private String sex;
-	private int year;
-	private int month;
-	private int day;
+	private String year;
+	private String month;
+	private String day;
 }
