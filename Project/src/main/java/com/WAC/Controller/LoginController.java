@@ -20,17 +20,21 @@ public class LoginController {
 		return "login";
 	}
 	
-	@PostMapping(value = "/login")
+	@PostMapping(value = "/loging")
 	public String getLoginInfo(LoginDto login, Model model) throws Exception{
 		LoginDto result = loginService.getLoginInfo(login);
 		if(result != null) {
 			model.addAttribute("result", result.getId() + "welcome.");
+			
+			System.out.println("success");
 			
 			return "redirect:/home";
 			
 		} else {
 		model.addAttribute("fail", "check your ID, PW");
 		System.out.println("fail. check your ID, PW");
+		System.out.println(login.getId());
+		System.out.println(login.getPassword());
 		return "login";
 		}
 	}

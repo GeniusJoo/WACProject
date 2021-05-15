@@ -11,11 +11,11 @@ public class Controller {
 		return "home";
 	}
 	
-	@GetMapping(value = "/signup")
-	public String Signup() throws Exception {
-			
-		return "signup";		
+	@GetMapping("/home")
+	public String reMain() {
+		return "home";
 	}
+	
 	
 	@GetMapping(value = "/personal")
 	public String Personal() throws Exception {

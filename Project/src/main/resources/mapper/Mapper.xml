@@ -9,8 +9,8 @@
 		FROM 
 			user
 		WHERE
-			id = #{id}
+			ID = #{id}
 		AND 
-			password = #{password}
+			PASSWORD = #{password}
 	</select>
 </mapper>
