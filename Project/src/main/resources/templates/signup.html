@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup.css" />
+    <script src="../static/signup.js"></script>
+    <link rel="stylesheet" href="../static/signup.css" />
     <title>회원가입</title>
 </head>
 <body>
@@ -29,7 +29,10 @@
           <a href="">셀프진단</a>
           <a href="">오늘의추천</a>
         </nav>   
-    <form class = "form-design">
+    <form 
+    class = "form-design" 
+    onsubmit="return validateInfo()"
+    >
         <div class = "section-one">
           <div class = "info">
             <label for="ID">아이디 *</label>
@@ -65,62 +68,15 @@
 
           <div class = "info">
             <label for="sex">성별 *</label>
-            <input id="man" type="checkbox" name="sex" value="man" /> 남자
-            <input id="woman" type="checkbox" name="sex" value="woman"/> 여자
+            <input id="man" type="checkbox" name="sex" value="man" onclick="checkOnlyOne(this)"/> 남자
+            <input id="woman" type="checkbox" name="sex" value="woman" onclick="checkOnlyOne(this)"/> 여자
           </div>
 
           <div class = "birth-info">
             <label for="birth">생년월일 *</label>
             <input id="birthYear" type="text" name="year"/>
-            <select id="birthMonth" name ="month">
-              <option>MM</option>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-            </select>
-            <select id="birthDay" name="day">
-              <option>DD</option>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-              <option>15</option>
-              <option>16</option>
-              <option>17</option>
-              <option>18</option>
-              <option>19</option>
-              <option>20</option>
-              <option>21</option>
-              <option>22</option>
-              <option>23</option>
-              <option>24</option>
-              <option>25</option>
-              <option>26</option>
-              <option>27</option>
-              <option>28</option>
-              <option>29</option>
-              <option>30</option>
-              <option>31</option>
-            </select>
+            
+           
             <div class="text-box">
               <p>"당신한테 제일 어울리는 색깔이 세상에서 가장 아름다운 색깔이다."</p>
               <h4>- 코코 샤넬 </h4>
