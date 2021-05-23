@@ -27,6 +27,8 @@ public class LoginController {
 			model.addAttribute("result", result.getId() + "welcome.");
 			
 			System.out.println("success");
+			System.out.println(login.getId());
+			System.out.println(login.getPassword());
 			
 			return "redirect:/home";
 			

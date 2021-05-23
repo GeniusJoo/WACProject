@@ -21,11 +21,11 @@ public class CreateController {
 		return "signup";		
 	}
 	
-	@PostMapping(value = "/signup")
+	@PostMapping(value = "/signupp")
 	public String setCreateInfo(LoginDto create, Model model) throws Exception{
 		
 		createservice.getCreateInfo(create);
 		System.out.println("test");
-		return "redirect:/table";
+		return "redirect:/home";
 	}
 }
