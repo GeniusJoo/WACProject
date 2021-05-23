@@ -23,7 +23,6 @@
 	,#{password}
 	,#{name}
 	,#{email}
-	,#{number}
 	,#{nickname}
 	,#{sex}
 	,#{year})
