@@ -28,4 +28,10 @@ public class Controller {
 			
 		return "info";		
 	}
+	
+	@GetMapping(value = "/intro1")
+	public String Intro1() throws Exception {
+		
+		return "intro1";
+	}
 }
