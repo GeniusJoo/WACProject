@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@font-face {
+  font-family: abster;
+}
+
+
+body, ul, h2, p {margin: 0; padding:0;}
+
+body {
+  background-color: white;
+  color: #999;
+}
+
+
+.title a {
+  position: relative; left:10px;
+  font-family: 'Cinzel', serif;
+  font-size: 70px; color: black;  
+  margin-bottom: 100px; 
+  text-decoration: none; z-index: 2;
+  text-align: center;
+}
+
+
+.nav-info1 {
+  display: flex;
+  position: absolute; top: 15px; right:30px;
+  margin-top: 0px; z-index: 2;
+  margin-left: 10px; 
+}
+
+.nav-info1 a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  color : black;
+  text-decoration: none;
+  position: relative;
+  padding: 0px 10px; z-index: 2;
+}
+
+.nav-info2 {
+  display: flex;
+  position: absolute; top: 15px; right:120px;
+  margin-top: 0px; z-index: 2;
+  margin-left: 10px;
+}
+
+.nav-info2 a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  color : black;
+  text-decoration: none;
+  position: relative;
+  padding: 0px 10px; z-index: 2;
+}
+
+.nav-items {
+  display: flex;
+  font-family: 'Noto Sans KR', sans-serif;
+  position: absolute; top: 30px; right:40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 10vh;
+}
+
+.nav-items a {
+  font-size: 20px;
+  color : black;
+  text-decoration: none;
+  position: relative;
+  padding: 6px 12px; z-index: 2;
+}
+
+.nav-items a::after {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: all .5s ease-out;
+}
+
+.nav-items a:hover::after {
+  width: 75%;
+}
+body, ul, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+  background-color: rgb(255, 239, 239);
+  background: url("img.jpg") no-repeat center;
+  color: #111;
+  background-size: 95% 75%;
+}
+
+.wrapper {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-item {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    margin: 0 4px;
+    transition: all .4s;
+}
+
+.color-item:hover {
+    opacity: 1;
+    flex-basis: 25%;
+    margin: 0 20px;
+}
+
+.color-item img {
+    width: 100%;
+}
+
+.intro {
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro:before {
+  content: ' ';
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 );
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 240px;
+}
+
+.intro_blue {
+    color: #00FFFF	;
+}
+
+.intro_green {
+    color: 	#00FF00;
+}
+
+.intro_pink {
+    color: pink;
+}
+
+.intro_purple {
+    color: violet;
+}
+
+.intro-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+}
+
+.intro-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+}
+
+.intro-content h2 span {
+    font-family: 'Single Day', cursive;
+    display: block;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.intro-content p {
+    color: white;
+    font-family: 'Cute Font', cursive;
+    font-size: 23px;
+    min-width: 140px;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.2;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.color-item:hover .intro-content p {
+    opacity: 1;
+    max-height: 9em;
+    margin-top: 0.4em;
+}
+
+
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
