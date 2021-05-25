@@ -2,7 +2,6 @@ package com.WAC.Model;
 
 public class LoginDto {
 	
-	private int number;
 	private String id;
 	private String password;
 	private String name;
@@ -11,12 +10,7 @@ public class LoginDto {
 	private String sex;
 	private String year;
 	
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+
 	public String getId() {
 		return id;
 	}
