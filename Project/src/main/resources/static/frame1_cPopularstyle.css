@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Parisienne&display=swap');
+
+* {margin: 0; padding:0; box-sizing: border-box;  background: rgb(235, 235, 235);;}
+body {
+  font-family: 'Cinzel', serif;
+  height: 100vh;
+  background: url("main.png")no-repeat center;
+  background-size: cover;
+}
+
+/*죄측 상단 타이틀*/
+.title a {
+  font-family: 'Cinzel', serif;
+  position: absolute;
+  font-size: 70px; color: black;  
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/*우측상단 미니배너 아이콘*/
+.info-icon a {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  width: 90px;
+  padding: 10px;
+}
+
+.alarm-icon a {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  width: 45px;
+  padding: 10px;
+}
+
