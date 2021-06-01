@@ -25,4 +25,13 @@
 	,#{sex}
 	,#{year})
 	</insert>
+	
+	<insert id="getPersonInfo"
+		parameterType="com.WAC.Model.ColorDto">
+		INSERT
+		INTO color
+		(skincolor)
+		VALUES
+		(#{color})
+	</insert>
 </mapper>

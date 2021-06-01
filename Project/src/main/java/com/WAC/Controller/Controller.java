@@ -17,12 +17,6 @@ public class Controller {
 	}
 	
 	
-	@GetMapping(value = "/personal")
-	public String Personal() throws Exception {
-			
-		return "personal";		
-	}	
-	
 	@GetMapping(value = "/info")
 	public String Info() throws Exception {
 			

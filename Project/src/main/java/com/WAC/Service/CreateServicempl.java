@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.WAC.Mapper.CreateMapper;
+import com.WAC.Model.ColorDto;
 import com.WAC.Model.LoginDto;
 
 @Service
@@ -14,5 +15,10 @@ public class CreateServicempl implements CreateService {
 	@Override
 	public void getCreateInfo(LoginDto create) throws Exception {
 		createMapper.getCreateInfo(create);
+	}
+	
+	@Override
+	public void getPersonInfo(ColorDto color) throws Exception {
+		createMapper.getPersonInfo(color);
 	}
 }

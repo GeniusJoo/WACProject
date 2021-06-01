@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("login.jpg")no-repeat center;
+  background: url("./image/login.jpg")no-repeat center;
   background-size: 100% 80%;
 }
 
