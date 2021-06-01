@@ -1,6 +1,7 @@
 // 체크 박스 name
 const inputNames = ['skinColor','accessary','eyeColor','hairColor','sunlight'];
 
+
 // 체크 박스 클릭 event 추가
 inputNames.forEach((inputName) => {
     let checkBoxses = document.querySelectorAll(`input[name=${inputName}]`)
@@ -49,8 +50,8 @@ const calCheckBox = () => {
 
 
 // 체크 박스 제출 함수
-const submitBnt = document.getElementById('submit')
-submitBnt.addEventListener('click', () => {
+function submitBnt()
+{
     if(checkCheckBox()){
         let result = calCheckBox()
         if (result[0] == "warm")
@@ -66,7 +67,7 @@ submitBnt.addEventListener('click', () => {
     } else{
         alert("체크박스를 모두 선택해주세요!");
     }
-})
+}
 
 
 
