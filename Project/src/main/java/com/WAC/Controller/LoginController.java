@@ -1,5 +1,7 @@
 package com.WAC.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +23,7 @@ public class LoginController {
 	}
 	
 	@PostMapping(value = "/loging")
-	public String getLoginInfo(LoginDto login, Model model) throws Exception{
+	public String getLoginInfo(LoginDto login, HttpSession session, Model model) throws Exception{
 		LoginDto result = loginService.getLoginInfo(login);
 		if(result != null) {
 			model.addAttribute("result", result.getId() + "welcome.");
@@ -33,11 +35,21 @@ public class LoginController {
 			return "redirect:/home";
 			
 		} else {
-		model.addAttribute("fail", "check your ID, PW");
+			model.addAttribute("fail", "check your ID, PW");
 		System.out.println("fail. check your ID, PW");
 		System.out.println(login.getId());
 		System.out.println(login.getPassword());
 		return "login";
 		}
+		
 	}
+	
+	@GetMapping(value = "/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("result");
+		System.out.println("성공");
+		
+		return "redirect:/login";
+	}
+	
 }
