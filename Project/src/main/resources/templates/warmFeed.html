@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WarmtonFeed</title>
+    <link href="wFeedstyle.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  	</script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js">
+	  </script>
+  </head>
+  <body>
+    <div id="header"> 
+      <div class="title">
+		    <a href="">Warm&Cool</a>
+	    </div>
+      
+      <div class="nav">
+		    <nav class="info-icon">
+          <a href=""><i class="fas fa-user-friends fa-lg" style="color:black"></i></a>
+        </nav> 
+        <nav class="alarm-icon">
+          <a href=""><i class="far fa-comment-alt fa-lg" style="color:black"></i></a>
+        </nav>
+      </div>
+    </div> 
+
+    <div id="category"> 
+      <center>
+      <div class="ton_box">
+        <div class="warm">
+          <B>웜톤</B>
+        </div>
+        <div class="memNum">
+          
+        </div>
+        users
+      </div>
+        <ul> 
+          <div class="ctg">
+            <div class="feed">
+              <i class="fas fa-lightbulb"></i>
+              <a href="" style="color:#FF1493"><B>Feed</B></a><B><br><br>
+            </div>
+            <div class="popular">
+              <i class="fas fa-thumbs-up"></i>
+              <a href=""><B>Popular</a><br><br>
+            </div>
+            <div class="media">
+              <i class="fas fa-images"></i>
+              <a href=""><B>Media</a><br><br>
+            </div>
+            <div class="ootd">
+              <i class="fas fa-tshirt"></i>
+              <a href=""><B>OOTD</a>
+            </div>
+          </div>
+       </ul>
+    </center> 
+    </div> 
+    
+    <div id="post"> 
+      <center>
+      <div class="post_box">
+        <form method="post" action="BoardServlet">
+        	<input type="hidden" value="board_write" name="command">
+            <table>
+                <tr>
+                  <B>포스트 쓰기</B>
+                  <p><textarea placeholder="게시판에 남겨보세요..."></textarea></p>
+                </tr>
+            </table>
+            <div class="image">
+              <i class="far fa-image fa-lg"></i>&nbsp&nbsp<input class="btn" type="submit" value="완료">
+            </div> 
+        </form>
+      </div>
+      <br><br>
+
+      <div class="post1">
+        <div class="postInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="info2">
+            회원아이디<br>
+            게시일
+          </div>
+        </div>
+        <div class="content">
+          게시글
+        </div>
+        <hr class="line">
+        <div class="icon">
+          <div class="thumb">
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+          <div class="comment">
+            <i class="fas fa-comments"></i>
+          </div>
+        </div>
+        <hr class="line">
+        <div class="commentInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="commentID">
+            아이디
+          </div>
+          <div class="commentCTT">
+            댓글 내용
+          </div>
+        </div>
+        <br>
+        <div class="commentInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="commentID">
+            아이디
+          </div>
+          <div class="commentCTT">
+            댓글 내용
+          </div>
+        </div>
+        <br>
+        <div class="commentInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="commentID">
+            아이디
+          </div>
+          <div class="commentCTT">
+            댓글 내용
+          </div>
+        </div>
+      </div>
+      <br><br>
+
+      <div class="post2">
+        <div class="postInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="info2">
+            회원아이디<br>
+            게시일
+          </div>
+        </div>
+        <div class="content">
+          게시글
+        </div>
+        <hr class="line">
+        <div class="icon">
+          <div class="thumb">
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+          <div class="comment">
+            <i class="fas fa-comments"></i>
+          </div>
+        </div>
+        <hr class="line">
+        <div class="commentInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="commentID">
+            아이디
+          </div>
+          <div class="commentCTT">
+            댓글 내용
+          </div>
+        </div>
+        <br>
+        <div class="commentInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="commentID">
+            아이디
+          </div>
+          <div class="commentCTT">
+            댓글 내용
+          </div>
+        </div>
+        <br>
+        <div class="commentInfo">
+          <i class="fas fa-user"></i>&nbsp
+          <div class="commentID">
+            아이디
+          </div>
+          <div class="commentCTT">
+            댓글 내용
+          </div>
+        </div>
+      </div>
+    </center> 
+    </div> 
+
+    <div id="info"> 
+      <center>
+         <div class="info_box2">
+          My Personal Color is...<br>
+          <div class="color">
+            <B>Warm</B>
+          </div>
+        </div>
+
+        <div class="policy">
+        <br>개인정보처리방침&nbsp&nbsp이용약관<br>
+        서비스운영정책&nbsp
+        <a href="" >퍼스널컬러소개</a><br><br>
+        </div>
+
+        <div class="inc_box">
+          © WarmNCool COMPANY Inc.
+        </div>
+        <br>
+        <div class="shopping_box">
+          <b>가장 먼저 만나는 나만의 쇼핑</b><br><br>
+          <a href=""><i class="fas fa-cart-plus fa-3x"></i></a>
+        </div>
+      </center>
+    </div> 
+
+    <script src="wFeedscript.js"></script>
+  </body>
+</html>

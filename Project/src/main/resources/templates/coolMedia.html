@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CooltonMedia</title>
+    <link href="cMediastyle.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  	</script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js">
+	  </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
+  </head>
+  <body>
+    <div id="header"> 
+      <div class="title">
+		    <a href="">Warm&Cool</a>
+	    </div>
+      
+      <div class="nav">
+		    <nav class="info-icon">
+          <a href=""><i class="fas fa-user-friends fa-lg" style="color:black"></i></a>
+        </nav> 
+        <nav class="alarm-icon">
+          <a href=""><i class="far fa-comment-alt fa-lg" style="color:black"></i></a>
+        </nav>
+      </div>
+    </div> 
+
+    <div id="category"> 
+      <center>
+      <div class="ton_box">
+        <div class="warm">
+          <B>쿨톤</B>
+        </div>
+        <div class="memNum">
+          
+        </div>
+        users
+      </div>
+        <ul> 
+          <div class="ctg">
+            <div class="feed">
+              <i class="fas fa-lightbulb"></i>
+              <a href=""><B>Feed</B></a><B><br><br>
+            </div>
+            <div class="popular">
+              <i class="fas fa-thumbs-up"></i>
+              <a href=""><B>Popular</a><br><br>
+            </div>
+            <div class="media">
+              <i class="fas fa-images"></i>
+              <a href="" style="color:rgb(0, 60, 255)"><B>Media</a><br><br>
+            </div>
+            <div class="ootd">
+              <i class="fas fa-tshirt"></i>
+              <a href=""><B>OOTD</a>
+            </div>
+          </div>
+       </ul>
+    </center> 
+    </div> 
+
+    <div id="post">
+      <center>
+      <div class="gallery-section">
+      <div class="inner-width">
+        <h1>Gallery</h1>
+        <div class="border"></div>
+        <div class="gallery">
+
+          <a href="./image/c2.png" class="image">
+            <img src="./image/c2.png" alt="">
+          </a>
+
+          <a href="./image/c3.png" class="image">
+            <img src="./image/c3.png" alt="">
+          </a>
+
+          <a href="./image/c1.jpg" class="image">
+            <img src="./image/c1.jpg" alt="">
+          </a>
+
+          <a href="./image/c4.jpg" class="image">
+            <img src="./image/c4.jpg" alt="">
+          </a>
+
+          <a href="./image/c5.png" class="image">
+            <img src="./image/c5.png" alt="">
+          </a>
+
+          <a href="./image/c6.png" class="image">
+            <img src="./image/c6.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+    $(".gallery").magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery:{
+        enabled: true
+      }
+    });
+    </script>
+    </center>
+    </div>
+
+
+
+    <div id="info"> 
+      <center>
+         <div class="info_box2">
+          My Personal Color is...<br>
+          <div class="color">
+            <B>Cool</B>
+          </div>
+        </div>
+
+        <div class="policy">
+        <br>개인정보처리방침&nbsp&nbsp이용약관<br>
+        서비스운영정책&nbsp
+        <a href="" >퍼스널컬러소개</a><br><br>
+        </div>
+
+        <div class="inc_box">
+          © WarmNCool COMPANY Inc.
+        </div>
+        <br>
+        <div class="shopping_box">
+          <b>가장 먼저 만나는 나만의 쇼핑</b><br><br>
+          <a href=""><i class="fas fa-cart-plus fa-3x"></i></a>
+        </div>
+      </center>
+    </div> 
+    <script src="cMediascript.js"></script>
+  </body>
+</html>
