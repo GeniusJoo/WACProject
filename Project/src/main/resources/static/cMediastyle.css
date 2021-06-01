@@ -190,14 +190,14 @@ body {
  /* 스크롤 바 넓이 */
 ::-webkit-scrollbar{width: 9px;}
 /* 스크롤 바 기본 색상 */
-::-webkit-scrollbar-track {background-color:rgb(228, 209, 228); border-radius: 10px;}
+::-webkit-scrollbar-track {background-color:rgb(209, 209, 228); border-radius: 10px;}
 /* 스크롤 구간 배경 색상 */
-::-webkit-scrollbar-thumb {background-color:rgb(253, 131, 178); border-radius: 10px;} 
+::-webkit-scrollbar-thumb {background-color:rgb(131, 159, 253); border-radius: 10px;} 
 /* 스크롤 바 위에 마우스 올렸을 때(hover) 색상 */
-::-webkit-scrollbar-thumb:hover {background-color: rgb(252, 109, 128); } 
+::-webkit-scrollbar-thumb:hover {background-color: rgb(109, 119, 252); } 
 /* 스크롤 상하단 버튼 넓이와 색상 */
 ::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
-width:16px; height:16px; background-color: rgb(216, 112, 135);
+width:16px; height:16px; background-color: rgb(112, 122, 216);
 } 
 
 /***********************************************************************************/
@@ -251,7 +251,7 @@ width:16px; height:16px; background-color: rgb(216, 112, 135);
   padding: 8px;
   border: 1px solid;
   border-radius: 5%;
-  background-color: #E6E6FA;
+  background-color: #B0C4DE;
   width: 200px;
   height: 100px;
   font-size: 14px;
