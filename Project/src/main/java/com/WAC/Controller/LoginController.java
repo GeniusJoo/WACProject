@@ -26,7 +26,7 @@ public class LoginController {
 	public String getLoginInfo(LoginDto login, HttpSession session, Model model) throws Exception{
 		LoginDto result = loginService.getLoginInfo(login);
 		if(result != null) {
-			model.addAttribute("result", result.getId() + "welcome.");
+			session.setAttribute("result", result.getId() + "welcome.");
 			
 			System.out.println("success");
 			System.out.println(login.getId());
@@ -35,7 +35,7 @@ public class LoginController {
 			return "redirect:/home";
 			
 		} else {
-			model.addAttribute("fail", "check your ID, PW");
+			session.setAttribute("fail", "check your ID, PW");
 		System.out.println("fail. check your ID, PW");
 		System.out.println(login.getId());
 		System.out.println(login.getPassword());
