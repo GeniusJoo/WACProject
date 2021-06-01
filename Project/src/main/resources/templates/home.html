@@ -29,15 +29,18 @@
                     소개
                 </button>
                 
-                <button sec:authorize="isAnonymous()" class="header__toolbar--button" onclick="location.href='login'" type="submit">
+                {{^user}}
+                <button class="header__toolbar--button" onclick="location.href='login'" type="submit">
                     <span class="material-icons">person</span>
                     로그인
                 </button>
-                
-                <button sec:authorize="isAuthenticated()" class="header__toolbar--button" onclick="location.href='login'" type="submit">
+                {{/user}}
+                {{#user}}
+                <button class="header__toolbar--button" onclick="location.href='logout'" type="submit">
                     <span class="material-icons">person</span>
                     로그아웃
                 </button>
+                {{/user}}
             </toolbar>
             <gnb class="header__gnb">
             
