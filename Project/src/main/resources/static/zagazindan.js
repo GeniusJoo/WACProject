@@ -53,7 +53,16 @@ const submitBnt = document.getElementById('submit')
 submitBnt.addEventListener('click', () => {
     if(checkCheckBox()){
         let result = calCheckBox()
-        alert(result[0] == "warm" ?"당신의 퍼스널 컬러는 웜톤입니다.":"당신의 퍼스널 컬러는 쿨톤입니다.")
+        if (result[0] == "warm")
+        {
+            alert("당신의 퍼스널 컬러는 웜톤입니다.");
+            return result[0];
+        }
+        else (result[0] == "cold")
+        {
+            alert("당신의 퍼스널 컬러는 쿨톤입니다.");
+            return result[0];
+        }
     } else{
         alert("체크박스를 모두 선택해주세요!");
     }
