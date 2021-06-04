@@ -19,10 +19,20 @@
       <a onclick="location.href='intro1'">소개</a>
     </nav>
 
+    {{^result}}
+    <nav class="nav-info2">
+      <i class="fas fa-user-friends" style="color:black"></i> 
+      <a onclick="location.href='login'" type="submit">로그인</a>
+    </nav> 
+    {{/result}}
+    
+    {{#result}}
     <nav class="nav-info2">
       <i class="fas fa-user-friends" style="color:black"></i> 
       <a onclick="location.href='info'">내 정보</a>
+      <a onclick="location.href='logout'" type="submit">로그아웃</a>
     </nav> 
+    {{/result}}
 
     <nav class="nav-items">
       <a onclick="location.href='intro1'">퍼스널컬러란?</a>
