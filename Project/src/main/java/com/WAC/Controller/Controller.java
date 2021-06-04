@@ -82,4 +82,10 @@ public class Controller {
 		
 		return "warmPopular";
 	}
+	
+	@GetMapping(value = "/myinfoedit")
+	public String Myinfoedit() throws Exception {
+		
+		return "myinfoedit";
+	}
 }
