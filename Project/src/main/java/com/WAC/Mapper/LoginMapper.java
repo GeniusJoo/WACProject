@@ -9,5 +9,5 @@ import com.WAC.Model.LoginDto;
 @Mapper
 public interface LoginMapper {
 	LoginDto getLoginInfo(LoginDto login) throws Exception;
-
+	LoginDto getUpdateInfo(LoginDto vo) throws Exception;
 }

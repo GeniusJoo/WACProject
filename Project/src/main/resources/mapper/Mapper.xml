@@ -13,4 +13,14 @@
 		AND 
 			PASSWORD = #{password}
 	</select>
+	
+	<update id="getUpdateInfo"
+		parameterType="com.WAC.Model.LoginDto">
+		UPDATE user
+		name = #{name},
+		nickname = #{nickname},
+		password = #{password},
+		email = #{email)
+		WHERE id = #{id}
+	</update>
 </mapper>

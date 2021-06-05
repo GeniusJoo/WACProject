@@ -14,4 +14,10 @@ public class LoginServicempl implements LoginService {
 	public LoginDto getLoginInfo(LoginDto login) throws Exception {
 		return loginMapper.getLoginInfo(login);
 	}
+	
+	@Override
+	public void getUpdateInfo(LoginDto vo) throws Exception {
+		
+		return loginMapper.getUpdateInfo("Mapper.getUpdateInfo", vo);
+	}
 }
