@@ -42,13 +42,28 @@
                 </button>
                 {{/result}}
             </toolbar>
-            <nav class="nav-items">
-              <a onclick="location.href='intro1'">퍼스널컬러란?</a>
-              <a onclick="location.href='warmFeed'">웜톤</a>
-              <a onclick="location.href='coolFeed'">쿨톤</a>
-              <a onclick="location.href='personal'">셀프진단</a>
-              <a href="">오늘의추천</a>
-            </nav>            
+            <gnb class="header__gnb">
+            
+                <button class="header__gnb--button" onclick="location.href='intro1'" type="submit">
+                    퍼스널컬러?
+                </button>
+                
+                <button class="header__gnb--button" onclick="location.href='warmFeed'" type="submit">
+                    웜톤
+                </button>
+                
+                <button class="header__gnb--button" onclick="location.href='coolFeed'" type="submit">
+                    쿨톤
+                </button>
+                
+                <button class="header__gnb--button" onclick="location.href='personal'" type="submit">
+                    셀프진단
+                </button>
+                
+                <button class="header__gnb--button" type="submit">
+                    오늘의추천
+                </button>
+            </gnb>
         </header>
         <section class="main__content">
             <p class="main__content--title">Warm&#38;Cool</p>
