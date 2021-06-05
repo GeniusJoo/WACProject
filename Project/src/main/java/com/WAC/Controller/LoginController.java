@@ -1,5 +1,6 @@
 package com.WAC.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,21 +26,16 @@ public class LoginController {
 	}
 	
 	
-	@GetMapping(value = "/info")
-	public String Info(LoginDto id, HttpSession session, Model model) throws Exception {
-		
-		session.getAttribute("result");
-		System.out.println(session.getAttribute("result"));
-		
-		return "info";		
-	}
-	
-	
 	@PostMapping(value = "/loging")
 	public String getLoginInfo(LoginDto login, HttpSession session, Model model) throws Exception{
 		LoginDto result = loginService.getLoginInfo(login);
 		if(result != null) {
 			session.setAttribute("result", result.getId());
+			session.setAttribute("result", result.getName());
+			session.setAttribute("result", result.getNickname());
+			session.setAttribute("result", result.getPassword());
+			session.setAttribute("result", result.getEmail());
+			
 			session.setAttribute("result1", result.getName());
 			
 			System.out.println("success");
@@ -64,6 +60,22 @@ public class LoginController {
 		System.out.println("성공");
 		
 		return "redirect:/login";
+	}
+	
+	@GetMapping(value = "/myinfoedit")
+	public String Myinfoedit(HttpServletRequest req, Model model, LoginDto vo) throws Exception {
+		
+		HttpSession session = req.getSession();
+		
+		LoginDto result = (LoginDto) session.getAttribute("result");
+		LoginDto modifyResult = loginService.Myinfoedit(result.getId());
+		
+		model.addAttribute("modifyName", modifyResult.getName());
+		model.addAttribute("modifyNickname", modifyResult.getNickname());
+		model.addAttribute("modifyPassword", modifyResult.getPassword());
+		model.addAttribute("modifyEmail", modifyResult.getEmail());
+		
+		return "myinfoedit";
 	}
 	
 	@PostMapping(value = "/myinfoedit")

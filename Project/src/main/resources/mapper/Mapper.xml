@@ -14,7 +14,7 @@
 			PASSWORD = #{password}
 	</select>
 	
-	<select id="Info" parameterType="com.WAC.Model.LoginDto" resultType="com.WAC.Model.LoginDto">
+	<select id="Myinfoedit" parameterType="String" resultType="com.WAC.Model.LoginDto">
 		SELECT 
 			*
 		FROM 

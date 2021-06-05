@@ -83,14 +83,10 @@ public class Controller {
 		return "warmPopular";
 	}
 	
-	@GetMapping(value = "/myinfoedit")
-	public String Myinfoedit(HttpServletRequest req, Model model, LoginDto vo) throws Exception {
+	
+	@GetMapping(value = "/info")
+	public String Info() throws Exception {
 		
-		HttpSession session = req.getSession();
-		
-		LoginDto user = (LoginDto) session.getAttribute("user");
-		
-		
-		return "myinfoedit";
+		return "info";
 	}
 }

@@ -23,8 +23,14 @@ public class LoginServicempl implements LoginService {
 	}
 
 	@Override
-	public LoginDto Info(LoginDto id) {
+	public LoginDto Info(LoginDto id) throws Exception {
 		
 		return loginMapper.Info(id);
+	}
+
+	@Override
+	public LoginDto Myinfoedit(String id) throws Exception {
+		
+		return loginMapper.Myinfoedit(id);
 	}
 }
