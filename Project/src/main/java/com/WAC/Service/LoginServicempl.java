@@ -1,5 +1,6 @@
 package com.WAC.Service;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,12 @@ public class LoginServicempl implements LoginService {
 	@Override
 	public void getUpdateInfo(LoginDto vo) throws Exception {
 		
-		return loginMapper.getUpdateInfo("Mapper.getUpdateInfo", vo);
+		loginMapper.getUpdateInfo(vo);
+	}
+
+	@Override
+	public LoginDto Info(LoginDto id) {
+		
+		return loginMapper.Info(id);
 	}
 }
