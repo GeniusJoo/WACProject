@@ -1,9 +1,14 @@
 package com.WAC.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.WAC.Model.LoginDto;
 
 @org.springframework.stereotype.Controller
 public class Controller {
@@ -79,7 +84,12 @@ public class Controller {
 	}
 	
 	@GetMapping(value = "/myinfoedit")
-	public String Myinfoedit() throws Exception {
+	public String Myinfoedit(HttpServletRequest req, Model model, LoginDto vo) throws Exception {
+		
+		HttpSession session = req.getSession();
+		
+		LoginDto user = (LoginDto) session.getAttribute("user");
+		
 		
 		return "myinfoedit";
 	}

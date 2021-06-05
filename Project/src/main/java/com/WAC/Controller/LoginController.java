@@ -40,6 +40,7 @@ public class LoginController {
 		LoginDto result = loginService.getLoginInfo(login);
 		if(result != null) {
 			session.setAttribute("result", result.getId());
+			session.setAttribute("result1", result.getName());
 			
 			System.out.println("success");
 			System.out.println(login.getId());
@@ -64,4 +65,11 @@ public class LoginController {
 		
 		return "redirect:/login";
 	}
+	
+	@PostMapping(value = "/myinfoedit")
+	public String Myinfoedit() throws Exception {
+		
+		return "myinfoedit";
+	}
+	
 }
