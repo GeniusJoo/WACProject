@@ -14,6 +14,16 @@
 			PASSWORD = #{password}
 	</select>
 	
+	<select id="Info" parameterType="com.WAC.Model.LoginDto" resultType="com.WAC.Model.LoginDto">
+		SELECT 
+			*
+		FROM 
+			user
+		WHERE
+			id = #{id}
+
+	</select>
+	
 	<update id="getUpdateInfo"
 		parameterType="com.WAC.Model.LoginDto">
 		UPDATE user

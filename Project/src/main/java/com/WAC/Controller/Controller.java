@@ -1,6 +1,8 @@
 package com.WAC.controller;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @org.springframework.stereotype.Controller
@@ -14,13 +16,6 @@ public class Controller {
 	@GetMapping("/home")
 	public String reMain() {
 		return "home";
-	}
-	
-	
-	@GetMapping(value = "/info")
-	public String Info() throws Exception {
-			
-		return "info";		
 	}
 	
 	@GetMapping(value = "/intro1")
