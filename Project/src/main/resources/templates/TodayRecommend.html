@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TodayRecommendation</title>
+    <script src="glide.min.js" charset="utf-8"></script>
+    <link href="glide.core.min.css" rel="stylesheet" />
+    <link href="tReco_style.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script src="tReco_script.js"></script>
+  </head>
+  <body>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <div class="title">
+      <a onclick="location.href='home'">Warm&Cool</a>
+    </div>    
+
+    <nav class="nav-info1">
+      <i class="far fa-comment-alt" style="color:black"></i>
+      <a onclick="location.href='intro1'">소개</a>
+    </nav>
+
+    <nav class="nav-info2">
+      <i class="fas fa-user-friends" style="color:black"></i> 
+      <a onclick="location.href='info'">내 정보</a>
+    </nav> 
+
+    <nav class="nav-items">
+      <a onclick="location.href='intro1'">퍼스널컬러란?</a>
+      <a onclick="location.href='warmFeed">웜톤</a>
+      <a onclick="location.href='coolFeed'">쿨톤</a>
+      <a onclick="location.href='personal'">셀프진단</a>
+      <a onclick="location.href='tReco'">오늘의추천</a>
+    </nav>
+    
+    <div class="images glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img src="./image/1.png" alt="">
+            <div class="cost">
+              <a href="" >아우터: 자라 크루넥 지퍼 코트 139,000 원</a>
+              <a href="" >상의: H&M 니트 스웨터 25,000원</a>
+              <a href="" >하의: 망고 스키니 패티 진 39,000원</a>
+              <a href="" >슈즈: H&M 블록힐 펌프스 39,000원</a>
+              <a href="" >귀걸이: 포에버21 테슬 드롭 귀걸이 6,900원</a>
+              <a href="" >가방: H&M 스웨이드 숄더백 79,000></a>
+            </div>
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/2.jpg" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/3.png" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/4.jpg" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/5.png" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/6.png" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/7.png" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/8.jpg" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/9.jpg" alt="">
+          </li>
+
+          <li class="glide__slide">
+            <img src="./image/10.jpg" alt="">
+          </li>
+        </ul>
+      </div>
+
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-arrow-left"></i></button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <script>
+      new Glide(".images",{
+        type: 'carousel',
+        perView: 5,
+        focusAt: 'center',
+        gap: 40,
+        breakpoints: {
+          1200:{
+            perView: 3
+          },
+          800:{
+            perView: 2
+          }
+        }
+      }).mount();
+    </script>
+  
+  <nav class="end">
+    © WNC COMPANY Inc.
+  </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>
