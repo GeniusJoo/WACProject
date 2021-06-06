@@ -137,8 +137,6 @@ padding: 60px 40px;
 
 /*************버튼****************/
 .btn {
-  margin-left: 870px;
-  margin-top: 190px;
   z-index: 5;
   height: 100%;
   display: flex;
