@@ -24,6 +24,10 @@
     <main class="main">
         <header class="header">
             <toolbar class="header__toolbar">
+                {{#result}}
+                <div>{{result1}}님 안녕하세요!   </div>
+                {{/result}}
+
                 <button class="header__toolbar--button" type="submit">
                     <span class="material-icons">question_answer</span>
                     소개
@@ -36,7 +40,6 @@
                 </button>
                 {{/result}}
                 {{#result}}
-                <div>{{result1}}님 안녕하세요!</div>
                 <button class="header__toolbar--button" onclick="location.href='logout'" type="submit">
                     <span class="material-icons">person</span>
                     로그아웃
