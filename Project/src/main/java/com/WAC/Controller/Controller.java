@@ -82,11 +82,16 @@ public class Controller {
 		
 		return "warmPopular";
 	}
-	
-	
+
 	@GetMapping(value = "/info")
 	public String Info() throws Exception {
 		
 		return "info";
+	}
+	
+	@GetMapping(value = "/todayRecommend")
+	public String TodayRecommend() throws Exception {
+		
+		return "todayRecommend";
 	}
 }
