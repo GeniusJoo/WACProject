@@ -34,5 +34,14 @@
 		VALUES
 		(#{color})
 	</insert>
+	
+	<insert id="uploadFile"
+		parameterType="com.WAC.Model.PostDto">
+		INSERT
+		INTO w_post
+		(id,origin_name,file_name)
+		VALUES
+		(#{id},#{origin_name},#{file_name})
+	</insert>
 
 </mapper>

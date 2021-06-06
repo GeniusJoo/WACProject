@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.WAC.Mapper.CreateMapper;
 import com.WAC.Model.ColorDto;
 import com.WAC.Model.LoginDto;
+import com.WAC.Model.PostDto;
 
 @Service
 public class CreateServicempl implements CreateService {
@@ -20,5 +21,11 @@ public class CreateServicempl implements CreateService {
 	@Override
 	public void getPersonInfo(ColorDto color) throws Exception {
 		createMapper.getPersonInfo(color);
+	}
+
+	@Override
+	public void uploadFile(PostDto fileDto) throws Exception {
+		// TODO Auto-generated method stub
+		createMapper.uploadFile(fileDto);
 	}
 }

@@ -63,8 +63,8 @@
     <div id="post"> 
       <center>
       <div class="post_box">
-        <form method="post" action="asd" entype="multipart/form-data">
-        	<input type="hidden" value="{{result1}}" id ="id">
+        <form method="post" action="uploadFile" enctype="multipart/form-data">
+        	<!-- <input type="hidden" value="{{result1}}" id ="id"> -->
             <table>
                 <tr>
                   <B>포스트 쓰기</B>
@@ -72,7 +72,7 @@
                 </tr>
             </table>
             <div class="image">
-              <i class="far fa-image fa-lg"></i><input id="image" type="file">&nbsp&nbsp
+              <i class="far fa-image fa-lg"></i><input id="image" type="file" id="file" name="file">&nbsp&nbsp
             </div>
             <input class="btn" type="submit" value="완료">
         </form>

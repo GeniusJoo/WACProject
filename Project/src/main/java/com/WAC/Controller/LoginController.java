@@ -37,10 +37,7 @@ public class LoginController {
 		LoginDto result = loginService.getLoginInfo(login);
 		if(result != null) {
 			session.setAttribute("result", result.getId());
-			session.setAttribute("result", result.getName());
-			session.setAttribute("result", result.getNickname());
-			session.setAttribute("result", result.getPassword());
-			session.setAttribute("result", result.getEmail());
+
 			
 			session.setAttribute("result1", result.getName());
 			
@@ -85,33 +82,5 @@ public class LoginController {
 		
 		return "myinfoedit";
 	}
-	
-	@PostMapping(value = "/posting")
-	public String WarmFeedPosting(MultipartHttpServletRequest request) throws Exception {
-		PostDto dto = new PostDto();
-		
-		dto.setId(request.getParameter("id"));
-		dto.setPost(request.getParameter("post"));
-		dto.setW_date(request.getParameter("w_date"));
-		
-		MultipartFile mf = request.getFile("w_post");
-		String path = request.getRealPath("/Upload");
-		String fileName = mf.getOriginalFilename();
-		File uploadFile = new File(path + "//" + fileName);
-		
-		try {
-			mf.transferTo(uploadFile);
-		} catch (IllegalStateException e){
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		dto.setW_post(fileName);
-		
-		return "warmFeed";
-	}
-	
 
-	
 }
