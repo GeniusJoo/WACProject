@@ -63,17 +63,18 @@
     <div id="post"> 
       <center>
       <div class="post_box">
-        <form method="post" action="BoardServlet">
-        	<input type="hidden" value="board_write" name="command">
+        <form method="post" action="asd" entype="multipart/form-data">
+        	<input type="hidden" value="{{result1}}" id ="id">
             <table>
                 <tr>
                   <B>포스트 쓰기</B>
-                  <p><textarea placeholder="게시판에 남겨보세요..."></textarea></p>
+                  <p><textarea id= "content" placeholder="게시판에 남겨보세요..."></textarea></p>
                 </tr>
             </table>
             <div class="image">
-              <i class="far fa-image fa-lg"></i>&nbsp&nbsp<input class="btn" type="submit" value="완료">
-            </div> 
+              <i class="far fa-image fa-lg"></i><input id="image" type="file">&nbsp&nbsp
+            </div>
+            <input class="btn" type="submit" value="완료">
         </form>
       </div>
       <br><br>
