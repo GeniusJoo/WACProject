@@ -1,5 +1,7 @@
 package com.WAC.Mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -14,5 +16,6 @@ public interface CreateMapper {
 	void getCreateInfo(LoginDto create) throws Exception;
 	void getPersonInfo(ColorDto color) throws Exception;
 	void uploadFile(PostDto fileDto) throws Exception;
+	List<PostDto> getCreateList() throws Exception;
 
 }

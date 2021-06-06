@@ -20,7 +20,7 @@ import com.WAC.Service.LoginService;
 public class LoginController {
 	@Autowired
 	LoginService loginService;
-
+	
 
 	@GetMapping(value = "/login")
 	public String Login() throws Exception {

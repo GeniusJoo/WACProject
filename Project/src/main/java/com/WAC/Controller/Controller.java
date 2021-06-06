@@ -1,5 +1,6 @@
 package com.WAC.controller;
 
+import java.util.List;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -45,10 +46,23 @@ public class Controller {
 	@GetMapping(value = "/warmFeed")
 	public String WarmFeed(Model model, @RequestParam(required = false) String id,  HttpSession session) throws Exception {
 		if(session != null) {
+			List<PostDto> resultList = createservice.getCreateList();
 			model.addAttribute("dto", createservice.getCreate((String)session.getAttribute("result")));
+			model.addAttribute("resultList", resultList);
+			System.out.println(resultList);
+			
 		}
 		return "warmFeed";
 	}
+	
+//	@GetMapping(value = "/warmFeed")
+//	public String WarmFeed(Model model) throws Exception {
+//		List<PostDto> resultList = createservice.getCreateList();
+//		model.addAttribute("resultList", resultList);
+//		
+//		System.out.println(resultList);
+//		return "warmFeed";
+//	}
 	
 	@GetMapping(value = "/coolFeed")
 	public String CoolFeed() throws Exception {
@@ -111,7 +125,7 @@ public class Controller {
 	}
 	
 	@PostMapping(value = "/uploadFile")
-	public String uploadFile(@RequestParam("file") MultipartFile files, PostDto dto, HttpSession session, Model model) throws Exception {
+	public String uploadFile(@RequestParam("file") MultipartFile files, PostDto dto, LoginDto vo, HttpSession session, Model model) throws Exception {
 		String id = null;
 		try {
             String origFilename = files.getOriginalFilename();

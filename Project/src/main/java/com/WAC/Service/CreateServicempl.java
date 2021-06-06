@@ -1,5 +1,7 @@
 package com.WAC.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +29,12 @@ public class CreateServicempl implements CreateService {
 	public void uploadFile(PostDto fileDto) throws Exception {
 		
 		createMapper.uploadFile(fileDto);
+	}
+
+	@Override
+	public List<PostDto> getCreateList() throws Exception {
+		
+		return createMapper.getCreateList();
 	}
 
 	@Override

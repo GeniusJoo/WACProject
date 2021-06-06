@@ -77,17 +77,17 @@
         </form>
       </div>
       <br><br>
-      {{#asd}} <!-- 임의 변수 -->
+      {{ #resultList }} <!-- 임의 변수 -->
       <div class="post1">
         <div class="postInfo">
           <i class="fas fa-user"></i>&nbsp
           <div class="info2">
-            {{dto.id}}<br>
-            {{dto.wdate}}
+            {{id}}<br>
+            {{wdate}}
           </div>
         </div>
         <div class="content">
-         	{{dto.post}}
+         	{{post}}
         </div>
         <hr class="line">
         <div class="icon">
@@ -129,7 +129,7 @@
           </div>
         </div>
       </div>
-      {.{/asd}.}
+      {{ /resultList }}
       <br><br>
     </center> 
     </div> 
