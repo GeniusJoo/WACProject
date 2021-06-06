@@ -46,6 +46,7 @@ function calCheckBox() {
 function submitBtn() {
   if (checkCheckBox()) {
     var result = calCheckBox();
+    console.log(result);
     if (result[0] == 'warm') {
       alert('당신의 퍼스널 컬러는 웜톤입니다.');
       return result[0];

@@ -9,6 +9,8 @@ import com.WAC.Model.LoginDto;
 
 @Service
 public class LoginServicempl implements LoginService {
+	
+
 	@Autowired
 	private LoginMapper loginMapper;
 	
@@ -29,8 +31,8 @@ public class LoginServicempl implements LoginService {
 	}
 
 	@Override
-	public LoginDto Myinfoedit(String id) throws Exception {
+	public LoginDto Myinfoedit(LoginDto vo) throws Exception {
 		
-		return loginMapper.Myinfoedit(id);
+		return loginMapper.Myinfoedit(vo);
 	}
 }

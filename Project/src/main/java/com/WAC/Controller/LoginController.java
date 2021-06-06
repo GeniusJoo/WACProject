@@ -65,23 +65,26 @@ public class LoginController {
 	@GetMapping(value = "/myinfoedit")
 	public String Myinfoedit(HttpServletRequest req, Model model, LoginDto vo) throws Exception {
 		
-		HttpSession session = req.getSession();
+		LoginDto result = loginService.Myinfoedit(vo);
 		
-		LoginDto result = (LoginDto) session.getAttribute("result");
-		LoginDto modifyResult = loginService.Myinfoedit(result.getId());
+		System.out.println(result.getName());
+		System.out.println(result.getNickname());
+		System.out.println(result.getPassword());
+		System.out.println(result.getEmail());
 		
-		model.addAttribute("modifyName", modifyResult.getName());
-		model.addAttribute("modifyNickname", modifyResult.getNickname());
-		model.addAttribute("modifyPassword", modifyResult.getPassword());
-		model.addAttribute("modifyEmail", modifyResult.getEmail());
+		model.addAttribute("modifyName", result.getName());
+		model.addAttribute("modifyNickname", result.getNickname());
+		model.addAttribute("modifyPassword", result.getPassword());
+		model.addAttribute("modifyEmail", result.getEmail());
+		
+		System.out.println(result.getName());
+		System.out.println(result.getNickname());
+		System.out.println(result.getPassword());
+		System.out.println(result.getEmail());
 		
 		return "myinfoedit";
 	}
 	
-	@PostMapping(value = "/myinfoedit")
-	public String Myinfoedit() throws Exception {
-		
-		return "myinfoedit";
-	}
+
 	
 }
