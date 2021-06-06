@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.WAC.Mapper.CreateMapper;
+import com.WAC.Model.C_post;
 import com.WAC.Model.ColorDto;
 import com.WAC.Model.LoginDto;
 import com.WAC.Model.PostDto;
@@ -40,5 +41,24 @@ public class CreateServicempl implements CreateService {
 	@Override
 	public PostDto getCreate(String id) throws Exception {
 		return createMapper.getCreate(id);
+	}
+
+	@Override
+	public List<C_post> getCreateListC() throws Exception {
+	
+		return createMapper.getCreateListC();
+	}
+
+	@Override
+	public void uploadFileC(C_post fileDto) throws Exception {
+		
+		createMapper.uploadFileC(fileDto);
+		
+	}
+
+	@Override
+	public C_post getCreateC(String id) throws Exception {
+		
+		return createMapper.getCreateC(id);
 	}
 }

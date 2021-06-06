@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.WAC.Model.C_post;
 import com.WAC.Model.LoginDto;
 import com.WAC.Model.PostDto;
 import com.WAC.Service.CreateService;
@@ -65,7 +66,16 @@ public class Controller {
 //	}
 	
 	@GetMapping(value = "/coolFeed")
-	public String CoolFeed() throws Exception {
+	public String CoolFeed(Model model, @RequestParam(required = false) String id,  HttpSession session) throws Exception {
+		
+		if(session != null) {
+			List<C_post> resultList = createservice.getCreateListC();
+			model.addAttribute("dto", createservice.getCreateC((String)session.getAttribute("result")));
+			model.addAttribute("resultList", resultList);
+			System.out.println(resultList);
+			
+		}
+		
 		
 		return "coolFeed";
 	}
@@ -131,7 +141,7 @@ public class Controller {
             String origFilename = files.getOriginalFilename();
             String filename = MD5Generator(origFilename);
             /* 실행되는 위치의 'files' 폴더에 파일이 저장됩니다. */
-            String savePath = "C://Users//home//Documents//WACProject//Project//src//main//resources//gogo";
+            String savePath = "C://Users//home//Documents//WACProject//Project//src//main//resources//static//gogo";
             /* 파일이 저장되는 폴더가 없으면 폴더를 생성합니다. */
             if (!new File(savePath).exists()) {
                 try{
@@ -170,4 +180,52 @@ public class Controller {
         }
         return hexMD5hash.toString();
     }
+
+	
+	@PostMapping(value = "/uploadFileC")
+	public String uploadFileC(@RequestParam("file") MultipartFile files, C_post dto, LoginDto vo, HttpSession session, Model model) throws Exception {
+		String id = null;
+		try {
+	        String origFilename = files.getOriginalFilename();
+	        String filename = MD5Generator(origFilename);
+	        /* 실행되는 위치의 'files' 폴더에 파일이 저장됩니다. */
+	        String savePath = "C://Users//home//Documents//WACProject//Project//src//main//resources//static//gogo";
+	        /* 파일이 저장되는 폴더가 없으면 폴더를 생성합니다. */
+	        if (!new File(savePath).exists()) {
+	            try{
+	                new File(savePath).mkdir();
+	            }
+	            catch(Exception e){
+	                e.getStackTrace();
+	            }
+	        }
+	        String filePath = savePath + "\\" + origFilename;
+	        files.transferTo(new File(filePath));
+	
+	        C_post fileDto = new C_post();
+	        fileDto.setOrigin_name(origFilename);
+	        fileDto.setFile_name(filename);
+	        fileDto.setPost(dto.getPost());
+	        fileDto.setId((String)session.getAttribute("result"));
+	        createservice.uploadFileC(fileDto);
+	        id= fileDto.getId();
+	        
+	    } catch(Exception e) {
+	        e.printStackTrace();
+	    }
+		System.out.println(String.format("id는 %s", id));
+		return String.format("redirect:coolFeed?id=%s", id);
+	}
+	
+	public String MD5GeneratorC(String input) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+	    MessageDigest mdMD5 = MessageDigest.getInstance("MD5");
+	    mdMD5.update(input.getBytes("UTF-8"));
+	    byte[] md5Hash = mdMD5.digest();
+	    StringBuilder hexMD5hash = new StringBuilder();
+	    for(byte b : md5Hash) {
+	        String hexString = String.format("%02x", b);
+	        hexMD5hash.append(hexString);
+	    }
+	    return hexMD5hash.toString();
+	}
 }

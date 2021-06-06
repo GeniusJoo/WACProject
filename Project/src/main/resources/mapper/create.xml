@@ -17,6 +17,21 @@
 			*
 		FROM w_post
 	</select>
+	
+	<select id="getCreateC" parameterType="java.lang.String" resultType="com.WAC.Model.C_post">
+		SELECT
+			*
+		FROM c_post
+		WHERE id = #{id}
+		ORDER BY wdate DESC 
+		LIMIT 1
+	</select>
+	
+	<select id="getCreateListC" resultType="com.WAC.Model.C_post">
+		SELECT
+			*
+		FROM c_post
+	</select>
 
 	<insert id="getCreateInfo"
 	parameterType ="com.WAC.Model.LoginDto">
@@ -53,6 +68,15 @@
 		parameterType="com.WAC.Model.PostDto">
 		INSERT
 		INTO w_post
+		(id,post,origin_name,file_name)
+		VALUES
+		(#{id},#{post},#{origin_name},#{file_name})
+	</insert>
+	
+	<insert id="uploadFileC"
+		parameterType="com.WAC.Model.C_post">
+		INSERT
+		INTO c_post
 		(id,post,origin_name,file_name)
 		VALUES
 		(#{id},#{post},#{origin_name},#{file_name})

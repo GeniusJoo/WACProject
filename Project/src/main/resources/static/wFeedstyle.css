@@ -124,6 +124,12 @@ textarea {
   height: 100px;
 }
 
+#asd {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}
+
 .post_box {
   align-content: center;
   font-family: 'Noto Sans KR', sans-serif; 
