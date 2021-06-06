@@ -18,6 +18,10 @@
       </div>
     </section>
     
+      {{#result}}
+      <div>{{result1}}님 안녕하세요!</div>&nbsp
+      {{/result}}
+
       <nav class="nav-info1">
         <i class="far fa-comment-alt"></i>
         <a onclick="location.href='intro1'">소개</a>
@@ -40,9 +44,11 @@
       
       <nav class="nav-items">
         <a onclick="location.href='intro1'">퍼스널컬러란?</a>
+        {{#result}}
         <a onclick="location.href='warmFeed'">웜톤</a>
         <a onclick="location.href='coolFeed'">쿨톤</a>
         <a onclick="location.href='personal'">셀프진단</a>
+        {{/result}}
         <a onclick="location.href='TodayRecommend'">오늘의추천</a>
       </nav>  
 
