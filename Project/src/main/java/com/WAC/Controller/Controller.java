@@ -43,8 +43,10 @@ public class Controller {
 	}
 	
 	@GetMapping(value = "/warmFeed")
-	public String WarmFeed() throws Exception {
-		
+	public String WarmFeed(Model model, @RequestParam(required = false) String id,  HttpSession session) throws Exception {
+		if(session != null) {
+			model.addAttribute("dto", createservice.getCreate((String)session.getAttribute("result")));
+		}
 		return "warmFeed";
 	}
 	
@@ -109,7 +111,8 @@ public class Controller {
 	}
 	
 	@PostMapping(value = "/uploadFile")
-	public String uploadFile(@RequestParam("file") MultipartFile files,HttpSession session) throws Exception {
+	public String uploadFile(@RequestParam("file") MultipartFile files, PostDto dto, HttpSession session, Model model) throws Exception {
+		String id = null;
 		try {
             String origFilename = files.getOriginalFilename();
             String filename = MD5Generator(origFilename);
@@ -130,15 +133,16 @@ public class Controller {
             PostDto fileDto = new PostDto();
             fileDto.setOrigin_name(origFilename);
             fileDto.setFile_name(filename);
-            
+            fileDto.setPost(dto.getPost());
             fileDto.setId((String)session.getAttribute("result"));
             createservice.uploadFile(fileDto);
+            id= fileDto.getId();
             
         } catch(Exception e) {
             e.printStackTrace();
         }
-
-		return "redirect:warmFeed";
+		System.out.println(String.format("id는 %s", id));
+		return String.format("redirect:warmFeed?id=%s", id);
 	}
 	
 	public String MD5Generator(String input) throws UnsupportedEncodingException, NoSuchAlgorithmException {

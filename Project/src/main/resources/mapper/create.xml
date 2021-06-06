@@ -3,6 +3,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         
 <mapper namespace="com.WAC.Mapper.CreateMapper">
+	<select id="getCreate" parameterType="java.lang.String" resultType="com.WAC.Model.PostDto">
+		SELECT
+			*
+		FROM w_post
+		WHERE id = #{id}
+		ORDER BY wdate DESC 
+		LIMIT 1
+	</select>
 
 	<insert id="getCreateInfo"
 	parameterType ="com.WAC.Model.LoginDto">

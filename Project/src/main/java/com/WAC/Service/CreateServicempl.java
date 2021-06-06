@@ -25,7 +25,12 @@ public class CreateServicempl implements CreateService {
 
 	@Override
 	public void uploadFile(PostDto fileDto) throws Exception {
-		// TODO Auto-generated method stub
+		
 		createMapper.uploadFile(fileDto);
+	}
+
+	@Override
+	public PostDto getCreate(String id) throws Exception {
+		return createMapper.getCreate(id);
 	}
 }

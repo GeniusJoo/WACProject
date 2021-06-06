@@ -63,32 +63,31 @@
     <div id="post"> 
       <center>
       <div class="post_box">
-        <form method="post" action="uploadFile" enctype="multipart/form-data">
-        	<!-- <input type="hidden" value="{{result1}}" id ="id"> -->
+        <form name="uploadForm" method="post" action="uploadFile" enctype="multipart/form-data">
             <table>
                 <tr>
                   <B>포스트 쓰기</B>
-                  <p><input type="text" id= "content" placeholder="게시판에 남겨보세요..."></p>
+                  <p><input type="text" id="post" name="post" placeholder="게시판에 남겨보세요..."></p>
                 </tr>
             </table>
             <div class="image">
               <i class="far fa-image fa-lg"></i><input id="image" type="file" id="file" name="file">&nbsp&nbsp
             </div>
-            <input class="btn" type="submit" value="완료">
+            <button type="submit">완료</button>
         </form>
       </div>
       <br><br>
-      {.{#asd}.} <!-- 임의 변수 -->
+      {{#asd}} <!-- 임의 변수 -->
       <div class="post1">
         <div class="postInfo">
           <i class="fas fa-user"></i>&nbsp
           <div class="info2">
-            {.{id}.}<br>
-            {.{w_date}.}
+            {{dto.id}}<br>
+            {{dto.wdate}}
           </div>
         </div>
         <div class="content">
-          {.{post}.}
+         	{{dto.post}}
         </div>
         <hr class="line">
         <div class="icon">
@@ -160,7 +159,6 @@
         </div>
       </center>
     </div> 
-
     <script src="wFeedscript.js"></script>
   </body>
 </html>

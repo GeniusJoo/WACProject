@@ -1,8 +1,5 @@
 package com.WAC.controller;
 
-import java.io.File;
-import java.io.IOException;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -37,7 +34,6 @@ public class LoginController {
 		LoginDto result = loginService.getLoginInfo(login);
 		if(result != null) {
 			session.setAttribute("result", result.getId());
-
 			
 			session.setAttribute("result1", result.getName());
 			
@@ -60,6 +56,7 @@ public class LoginController {
 	@GetMapping(value = "/logout")
 	public String logout(HttpSession session) {
 		session.removeAttribute("result");
+		session.invalidate();
 		System.out.println("성공");
 		
 		return "redirect:/login";
