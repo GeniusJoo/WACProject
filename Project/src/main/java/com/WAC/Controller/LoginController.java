@@ -1,5 +1,8 @@
 package com.WAC.controller;
 
+import java.io.File;
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -9,8 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.WAC.Model.LoginDto;
+import com.WAC.Model.PostDto;
 import com.WAC.Service.LoginService;
 
 @Controller
@@ -77,12 +83,33 @@ public class LoginController {
 		model.addAttribute("modifyPassword", result.getPassword());
 		model.addAttribute("modifyEmail", result.getEmail());
 		
-		System.out.println(result.getName());
-		System.out.println(result.getNickname());
-		System.out.println(result.getPassword());
-		System.out.println(result.getEmail());
-		
 		return "myinfoedit";
+	}
+	
+	@PostMapping(value = "/posting")
+	public String WarmFeedPosting(MultipartHttpServletRequest request) throws Exception {
+		PostDto dto = new PostDto();
+		
+		dto.setId(request.getParameter("id"));
+		dto.setPost(request.getParameter("post"));
+		dto.setW_date(request.getParameter("w_date"));
+		
+		MultipartFile mf = request.getFile("w_post");
+		String path = request.getRealPath("/Upload");
+		String fileName = mf.getOriginalFilename();
+		File uploadFile = new File(path + "//" + fileName);
+		
+		try {
+			mf.transferTo(uploadFile);
+		} catch (IllegalStateException e){
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		dto.setW_post(fileName);
+		
+		return "warmFeed";
 	}
 	
 
