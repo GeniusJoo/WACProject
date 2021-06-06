@@ -131,7 +131,7 @@ public class Controller {
             String origFilename = files.getOriginalFilename();
             String filename = MD5Generator(origFilename);
             /* 실행되는 위치의 'files' 폴더에 파일이 저장됩니다. */
-            String savePath = "C://Users//home//Documents//workspace-spring-tool-suite-4-4.7.0.RELEASE//files";
+            String savePath = "C://Users//home//Documents//WACProject//Project//src//main//resources//gogo";
             /* 파일이 저장되는 폴더가 없으면 폴더를 생성합니다. */
             if (!new File(savePath).exists()) {
                 try{
