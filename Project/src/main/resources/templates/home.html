@@ -25,7 +25,7 @@
         <header class="header">
             <toolbar class="header__toolbar">
                 {{#result}}
-                <div>{{result1}}님 안녕하세요!   </div>
+                <div>{{result1}}님 안녕하세요!</div>&nbsp;
                 {{/result}}
 
                 <button class="header__toolbar--button" type="submit">
@@ -51,7 +51,7 @@
                 <button class="header__gnb--button" onclick="location.href='intro1'" type="submit">
                     퍼스널컬러?
                 </button>
-                
+                {{#result}}
                 <button class="header__gnb--button" onclick="location.href='warmFeed'" type="submit">
                     웜톤
                 </button>
@@ -59,7 +59,7 @@
                 <button class="header__gnb--button" onclick="location.href='coolFeed'" type="submit">
                     쿨톤
                 </button>
-                
+                {{/result}}
                 <button class="header__gnb--button" onclick="location.href='personal'" type="submit">
                     셀프진단
                 </button>
