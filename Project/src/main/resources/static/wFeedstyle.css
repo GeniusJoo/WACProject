@@ -134,7 +134,7 @@ textarea {
   align-content: center;
   font-family: 'Noto Sans KR', sans-serif; 
   color: black;
-  width: 500px;
+  width: 1200px;
   height : 200px;
   text-align: left;
   margin-left: 100px;
@@ -208,9 +208,13 @@ textarea {
 }
 
 .image {
-  float: right;  
-  margin-top: 7px;
+  margin-top: 90px;
   color: #3CB371;
+}
+
+.submitBtn {
+  margin-left: 370px;
+  margin-bottom: 300px;
 }
 
 .btn {
