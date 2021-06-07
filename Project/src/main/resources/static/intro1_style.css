@@ -105,7 +105,7 @@ li {
 
 body {
   background-color: rgb(255, 239, 239);
-  background: url("img.jpg") no-repeat center;
+  background: url("./image/img.jpg") no-repeat center;
   color: #111;
   background-size: 95% 75%;
 }
