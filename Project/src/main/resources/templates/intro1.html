@@ -21,10 +21,6 @@
 
       <nav class="nav-info1">
         <i class="far fa-comment-alt"></i>
-        {{#result}}
-        <div>{{result1}}님 안녕하세요!</div>&nbsp
-        {{/result}}
-
         <a onclick="location.href='intro1'">소개</a>
       </nav>
 
@@ -37,12 +33,15 @@
 
       {{#result}}
       <nav class="nav-info2">
+        {{#result}}
+        <div>{{result1}}님 안녕하세요!</div>&nbsp
+        {{/result}}
         <i class="fas fa-user-friends"></i> 
         <a onclick="location.href='info'">내 정보</a>
         <a onclick="location.href='logout'" type="submit">로그아웃</a>
       </nav> 
       {{/result}}
-      
+
       <nav class="nav-items">
         <a onclick="location.href='intro1'">퍼스널컬러란?</a>
         {{#result}}
