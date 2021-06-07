@@ -1,5 +1,6 @@
 package com.WAC.controller;
 
+import java.util.Collections;
 import java.util.List;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -48,6 +49,7 @@ public class Controller {
 	public String WarmFeed(Model model, @RequestParam(required = false) String id,  HttpSession session) throws Exception {
 		if(session != null) {
 			List<PostDto> resultList = createservice.getCreateList();
+			Collections.reverse(resultList);
 			model.addAttribute("dto", createservice.getCreate((String)session.getAttribute("result")));
 			model.addAttribute("resultList", resultList);
 			System.out.println(resultList);
@@ -70,6 +72,7 @@ public class Controller {
 		
 		if(session != null) {
 			List<C_post> resultList = createservice.getCreateListC();
+			Collections.reverse(resultList);
 			model.addAttribute("dto", createservice.getCreateC((String)session.getAttribute("result")));
 			model.addAttribute("resultList", resultList);
 			System.out.println(resultList);

@@ -188,9 +188,9 @@ textarea {
   border: 1px solid; border-radius: 3%;
   border-color: grey;
   color: black;
-  width: 350px;
-  height : 210px;
-  padding-left: 15px;
+  width: 320px;
+  height : 230px;
+  padding-left: 10px;
   padding-top: 5px;
   margin-top: 10px;
 }
