@@ -62,20 +62,27 @@ public class LoginController {
 		return "redirect:/login";
 	}
 	
+//	@GetMapping(value = "/myinfoedit")
+//	public String Myinfoedit(HttpServletRequest req, Model model, LoginDto vo) throws Exception {
+//		
+//		LoginDto result = loginService.Myinfoedit(vo);
+//		
+//		System.out.println(result.getName());
+//		System.out.println(result.getNickname());
+//		System.out.println(result.getPassword());
+//		System.out.println(result.getEmail());
+//		
+//		model.addAttribute("modifyName", result.getName());
+//		model.addAttribute("modifyNickname", result.getNickname());
+//		model.addAttribute("modifyPassword", result.getPassword());
+//		model.addAttribute("modifyEmail", result.getEmail());
+//		
+//		return "myinfoedit";
+//	}
+	
 	@GetMapping(value = "/myinfoedit")
-	public String Myinfoedit(HttpServletRequest req, Model model, LoginDto vo) throws Exception {
+	public String Myinfoedit() throws Exception {
 		
-		LoginDto result = loginService.Myinfoedit(vo);
-		
-		System.out.println(result.getName());
-		System.out.println(result.getNickname());
-		System.out.println(result.getPassword());
-		System.out.println(result.getEmail());
-		
-		model.addAttribute("modifyName", result.getName());
-		model.addAttribute("modifyNickname", result.getNickname());
-		model.addAttribute("modifyPassword", result.getPassword());
-		model.addAttribute("modifyEmail", result.getEmail());
 		
 		return "myinfoedit";
 	}

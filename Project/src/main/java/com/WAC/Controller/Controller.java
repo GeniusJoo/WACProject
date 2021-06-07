@@ -58,14 +58,6 @@ public class Controller {
 		return "warmFeed";
 	}
 	
-//	@GetMapping(value = "/warmFeed")
-//	public String WarmFeed(Model model) throws Exception {
-//		List<PostDto> resultList = createservice.getCreateList();
-//		model.addAttribute("resultList", resultList);
-//		
-//		System.out.println(resultList);
-//		return "warmFeed";
-//	}
 	
 	@GetMapping(value = "/coolFeed")
 	public String CoolFeed(Model model, @RequestParam(required = false) String id,  HttpSession session) throws Exception {

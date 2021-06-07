@@ -30,9 +30,4 @@ public class LoginServicempl implements LoginService {
 		return loginMapper.Info(id);
 	}
 
-	@Override
-	public LoginDto Myinfoedit(LoginDto vo) throws Exception {
-		
-		return loginMapper.Myinfoedit(vo);
-	}
 }
