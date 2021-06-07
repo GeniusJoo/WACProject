@@ -370,5 +370,39 @@ i {
     left: 30px;
     font-size: 12px;
     color: #666; }
+}
+.nav-items {
+    display: flex;
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute; top: 30px; right:40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 10vh;
+}
+  
+.nav-items a {
+    font-size: 20px;
+    color : black;
+    text-decoration: none;
+    position: relative;
+    padding: 6px 12px; z-index: 2;
+}
+  
+.nav-items a::after {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all .5s ease-out;
+}
+  
+.nav-items a:hover::after {
+    width: 70%;
+}
+
 
 /*# sourceMappingURL=style.css.map */
